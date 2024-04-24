@@ -1,0 +1,582 @@
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ ls
+hello.html  raisa.txt  raisaa.html  rss.txt  suraj.txt
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add raisaa.html
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano
+.git/        hello.html   raisa.txt    raisaa.html  rss.txt      suraj.txt
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git diff
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+diff --git a/raisaa.html b/raisaa.html
+index cb6f08a..430bccc 100644
+--- a/raisaa.html
++++ b/raisaa.html
+@@ -1 +1,2 @@
+ raisa is finaly geting job
++java
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git difftool
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+This message is displayed because 'diff.tool' is not configured.
+See 'git difftool --tool-help' or 'git help config' for more details.
+'git difftool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld kompare gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+
+Viewing (1/1): 'raisaa.html'
+Launch 'vimdiff' [Y/n]? y
+2 files to edit
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   raisaa.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git commit -m "raisa"
+[master cc3fbb0] raisa
+ 1 file changed, 1 insertion(+)
+ create mode 100644 raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add .
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git diff --staged
+diff --git a/raisaa.html b/raisaa.html
+index cb6f08a..430bccc 100644
+--- a/raisaa.html
++++ b/raisaa.html
+@@ -1 +1,2 @@
+ raisa is finaly geting job
++java
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git diff HEAD
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+diff --git a/raisaa.html b/raisaa.html
+index cb6f08a..e6b9842 100644
+--- a/raisaa.html
++++ b/raisaa.html
+@@ -1 +1,4 @@
+ raisa is finaly geting job
++java
++python
++
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status -s
+MM raisaa.html
+
+
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git log
+commit cc3fbb0017779c3305bcd79090e4cd827787735c (HEAD -> master)
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Tue Apr 23 13:16:57 2024 +0530
+
+    raisa
+
+commit 7182c316439f334aaf7b89bee847b14fea6e5e4a (origin/master)
+Merge: e550e04 b877ed4
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Mon Apr 22 13:20:42 2024 +0530
+
+    Merge branch 'master' of https://github.com/raisatam/myrepo
+    new file commit
+
+commit e550e049f1e56332a4acc24e3f83c3611fb9b230
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Mon Apr 22 13:15:45 2024 +0530
+
+    demo file
+
+commit b877ed4d640495d43a0101889deecfc569bf6255
+Author: raisatam <166595167+raisatam@users.noreply.github.com>
+Date:   Mon Apr 22 13:12:52 2024 +0530
+:
+
+
+
+
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ ls
+hello.html  raisa.txt  raisaa.html  rss.txt  suraj.txt
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add raisaa.html
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano
+.git/        hello.html   raisa.txt    raisaa.html  rss.txt      suraj.txt
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git diff
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+diff --git a/raisaa.html b/raisaa.html
+index cb6f08a..430bccc 100644
+--- a/raisaa.html
++++ b/raisaa.html
+@@ -1 +1,2 @@
+ raisa is finaly geting job
++java
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git difftool
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+This message is displayed because 'diff.tool' is not configured.
+See 'git difftool --tool-help' or 'git help config' for more details.
+'git difftool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld kompare gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+
+Viewing (1/1): 'raisaa.html'
+Launch 'vimdiff' [Y/n]? y
+2 files to edit
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   raisaa.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git commit -m "raisa"
+[master cc3fbb0] raisa
+ 1 file changed, 1 insertion(+)
+ create mode 100644 raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add .
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git diff --staged
+diff --git a/raisaa.html b/raisaa.html
+index cb6f08a..430bccc 100644
+--- a/raisaa.html
++++ b/raisaa.html
+@@ -1 +1,2 @@
+ raisa is finaly geting job
++java
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git diff HEAD
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+diff --git a/raisaa.html b/raisaa.html
+index cb6f08a..e6b9842 100644
+--- a/raisaa.html
++++ b/raisaa.html
+@@ -1 +1,4 @@
+ raisa is finaly geting job
++java
++python
++
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status -s
+MM raisaa.html
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git log
+commit cc3fbb0017779c3305bcd79090e4cd827787735c (HEAD -> master)
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Tue Apr 23 13:16:57 2024 +0530
+
+    raisa
+
+commit 7182c316439f334aaf7b89bee847b14fea6e5e4a (origin/master)
+Merge: e550e04 b877ed4
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Mon Apr 22 13:20:42 2024 +0530
+
+    Merge branch 'master' of https://github.com/raisatam/myrepo
+    new file commit
+
+commit e550e049f1e56332a4acc24e3f83c3611fb9b230
+Author: raisa <raisatamboli601@gmail.com>
+commit cc3fbb0017779c3305bcd79090e4cd827787735c (HEAD -> master)
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Tue Apr 23 13:16:57 2024 +0530
+
+    raisa
+
+commit 7182c316439f334aaf7b89bee847b14fea6e5e4a (origin/master)
+Merge: e550e04 b877ed4
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Mon Apr 22 13:20:42 2024 +0530
+
+    Merge branch 'master' of https://github.com/raisatam/myrepo
+    new file commit
+
+commit e550e049f1e56332a4acc24e3f83c3611fb9b230
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Mon Apr 22 13:15:45 2024 +0530
+
+    demo file
+
+commit b877ed4d640495d43a0101889deecfc569bf6255
+Author: raisatam <166595167+raisatam@users.noreply.github.com>
+Date:   Mon Apr 22 13:12:52 2024 +0530
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git show
+commit cc3fbb0017779c3305bcd79090e4cd827787735c (HEAD -> master)
+Author: raisa <raisatamboli601@gmail.com>
+Date:   Tue Apr 23 13:16:57 2024 +0530
+
+    raisa
+
+diff --git a/raisaa.html b/raisaa.html
+new file mode 100644
+index 0000000..cb6f08a
+--- /dev/null
++++ b/raisaa.html
+@@ -0,0 +1 @@
++raisa is finaly geting job
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git show cb6f08a
+raisa is finaly geting job
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git add .
+warning: in the working copy of 'raisaa.html', LF will be replaced by CRLF the next time Git touches it
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ nano flie1
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        flie1
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git  .gitignore
+git: '.gitignore' is not a git command. See 'git --help'.
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   raisaa.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        flie1
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ ls
+flie1  hello.html  raisa.txt  raisaa.html  rss.txt  suraj.txt
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ ls -l
+total 6
+-rw-r--r-- 1 HP ProBook 197121 12 Apr 23 13:32 flie1
+-rw-r--r-- 1 HP ProBook 197121 25 Apr 15 12:53 hello.html
+-rw-r--r-- 1 HP ProBook 197121  6 Apr 15 13:11 raisa.txt
+-rw-r--r-- 1 HP ProBook 197121 40 Apr 23 13:20 raisaa.html
+-rw-r--r-- 1 HP ProBook 197121  5 Apr 22 13:20 rss.txt
+-rw-r--r-- 1 HP ProBook 197121  6 Apr 22 13:13 suraj.txt
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$
+
+
+
+git int- intionalztion og git
+git config --global user .name  "  "  check this changes user
+git config --global user .email "  "
+get add. all file convert to stagen area  /git add filr name-one file add honar
+git commit -m "massege"  commit karanya sati  
+git status
+git stasus  -s
+git status --short
+gir remote add origin "github repo path"  //origin repo chi name tayar hoto  origin made value asate
+git push origin master    master origin ahe
+git pull origin master    pull honar
+git diff   working stagen area diff
+git difftool
+git diff  stagen   git diff --stagen(stagen commited)
+git diff HEAD git difftoll HEAD (commited -working)
+git reset HEAD(Saging to working)
+git reset --hard HEAD(commited to working)
+git reset --soft  HEAD(commited to staging)
+git log   commit ahet te show  /git log --oneline
+git show
+git show<<commit.id>>
+
+
+git .ignore  file la stagen ani commited are made patavayche nahi
+
+
+git tag 1.0---latest commint kele asate tyana
+
+light wiat tag
+anotead tag  git tag -a v1.b  -m "message"
+git tag -a v1.0 <commit.id>///7 fikasha jasta///
+
+
+
+
+HP ProBook@DESKTOP-T6N9OOB MINGW64 ~/OneDrive/Desktop/My_Project (master)
+$ history
+    1  vi firstp
+    2  nano firstfile.txt
+    3  nano firstfile.txt
+    4  vi raisa.txt
+    5  nano
+    6  ls
+    7  ls-l
+    8  ls -l
+    9  ls -a
+   10  git init
+   11  ls -a
+   12  git init
+   13  ls -a
+   14  git config --global user.name "raisa"
+   15  git config --global user.email "raisatamboli601@gmail.com"
+   16  git config --list
+   17  ls
+   18  git status
+   19  add hello.html
+   20  add .
+   21  bash :add
+   22  add raisa.txt
+   23  ls
+   24  add hello.html
+   25  git status
+   26  add .
+   27  git add .hello.html
+   28  git add hello.html
+   29  git status
+   30  git commit -m "first commit"
+   31  git status
+   32  git add .
+   33  git status
+   34  git commit -m "second commit"
+   35  git remote add origin https://github.com/raisatam/myrepo.git
+   36  git push origin master
+   37  git push origin master
+   38  git pull https://github.com/raisatam/myrepo.git
+   39  ls
+   40  git push origin master
+   41  git push -f origin master
+   42  nano suraj.txt
+   43  git status
+   44  git add .
+   45  git status
+   46  git commit -m "demo file"
+   47  git status
+   48  git pus origin master
+   49  git push origin master
+   50  git pull origin master
+   51  ls
+   52  git pull origin master
+   53  ls
+   54  git push origin master
+   55  git pull origin master
+   56  git diff
+   57  nano raisaa.html
+   58  ls
+   59  git add raisaa.html
+   60  git status
+   61  nano raisaa.html
+   62  git diff
+   63  git difftool
+   64  git status
+   65  git commit -m "raisa"
+   66  git status
+   67  git add.
+   68  git add .
+   69  git status
+   70  git diff --staged
+   71  nano raisaa.html
+   72  git diff HEAD
+   73  git status
+   74  git status -s
+   75  git log
+   76  git show
+   77  git show cb6f08a
+   78  git status
+   79  git add .
+   80  git status
+   81  nano flie1
+   82  git status
+   83  git  .gitignore
+   84  git status
+   85  ls
+   86  ls -l
+   87  git status
+   88  git status
+   89  git log
+   90  git log --oneline
+   91  git log --since="1 week ago"
